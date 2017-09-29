@@ -1,2 +1,0 @@
-class OutgoingMessage < ApplicationRecord
-end
