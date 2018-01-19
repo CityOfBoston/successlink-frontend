@@ -11,8 +11,7 @@
   },
   "repository": "",
   "scripts": {
-    "stage": "ember build --prod && rsync -r dist/* youthjobs@prep.mapc.org:/var/www/youthjobs/ember/",
-    "build": "ember build",
+    "build": "ember build --prod",
     "start": "ember server",
     "test": "ember test"
   },
