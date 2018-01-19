@@ -44,7 +44,7 @@ export default PaginatedController.extend({
   },
 
 
-  @action 
+  @action
   regeneratePassword(user) {
     if (!this.get('resettingPassword')) {
       this.set('resettingPassword', true);
@@ -54,8 +54,8 @@ export default PaginatedController.extend({
       this.store.createRecord('passwordReset', { user_id })
       .save()
       .catch(() => {
-        const userEmail = user.get('email');
-        //this.set('errorMessage', `Could not reset credentials for ${userEmail}.`);
+        // const userEmail = user.get('email');
+        // this.set('errorMessage', `Could not reset credentials for ${userEmail}.`);
       })
       .finally(() => {
         this.set('resettingPassword', false);

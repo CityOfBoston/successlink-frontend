@@ -2,7 +2,7 @@ import { moduleFor, test } from 'ember-qunit';
 
 moduleFor('controller:dashboard/partner/applicants', 'Unit | Controller | dashboard/partner/applicants', {
   // Specify the other units that are required for this test.
-  // needs: ['controller:foo']
+  needs: ['controller:dashboard.partner']
 });
 
 // Replace this with your real tests.

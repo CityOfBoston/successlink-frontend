@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import UpdateMapBoundsMixin from 'youth-match-v2/mixins/update-map-bounds';
+import UpdateMapBoundsMixin from 'successlink/mixins/update-map-bounds';
 import { module, test } from 'qunit';
 
 module('Unit | Mixin | update map bounds');

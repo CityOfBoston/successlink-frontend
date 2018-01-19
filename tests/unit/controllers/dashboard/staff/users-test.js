@@ -2,7 +2,7 @@ import { moduleFor, test } from 'ember-qunit';
 
 moduleFor('controller:dashboard/staff/users', 'Unit | Controller | dashboard/staff/users', {
   // Specify the other units that are required for this test.
-  // needs: ['controller:foo']
+  needs: ['service:session', 'service:ajax']
 });
 
 // Replace this with your real tests.

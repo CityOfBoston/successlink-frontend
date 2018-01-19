@@ -2,7 +2,7 @@ import { moduleFor, test } from 'ember-qunit';
 
 moduleFor('route:dashboard/youth/jobs/index', 'Unit | Route | dashboard/youth/jobs/index', {
   // Specify the other units that are required for this test.
-  // needs: ['controller:foo']
+  needs: ['service:mapState']
 });
 
 test('it exists', function(assert) {

@@ -10,7 +10,7 @@ moduleForComponent('status-map', 'helper:status-map', {
 test('it renders', function(assert) {
   this.set('inputValue', '1234');
 
-  this.render(hbs`{{status-map inputValue}}`);
+  this.render(hbs`{{ status-map inputValue }}`);
 
   assert.equal(this.$().text().trim(), '1234');
 });
