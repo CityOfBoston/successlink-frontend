@@ -6,19 +6,14 @@ moduleForComponent('youth-job-list', 'Integration | Component | youth job list',
 });
 
 test('it renders', function(assert) {
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+  let model = {
+    hasReachedMaxPositions: false,
+    positions: [],
+  }
+  this.set('model', model);
 
-  this.render(hbs`{{youth-job-list}}`);
-
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#youth-job-list}}
-      template block text
-    {{/youth-job-list}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+  this.render(hbs`{{youth-job-list model=model}}`);
+  let result = String(this.$().text().trim())
+  assert.ok(result.includes('YOUR JOB LIST'));
+  assert.ok(result.includes('You have an interest in 0/10 jobs'));
 });

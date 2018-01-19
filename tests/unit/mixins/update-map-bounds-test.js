@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import UpdateMapBoundsMixin from 'successlink/mixins/update-map-bounds';
+import UpdateMapBoundsMixin from '../../../mixins/update-map-bounds';
 import { module, test } from 'qunit';
 
 module('Unit | Mixin | update map bounds');

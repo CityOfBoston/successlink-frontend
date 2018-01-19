@@ -8,7 +8,7 @@ moduleForComponent('pure-title', 'helper:pure-title', {
 
 // Replace this with your real tests.
 test('it renders', function(assert) {
-  this.set('inputValue', '1234');
+  this.set('inputValue', 'abc: 1234');
 
   this.render(hbs`{{pure-title inputValue}}`);
 

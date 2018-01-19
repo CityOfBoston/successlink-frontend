@@ -8,17 +8,8 @@ moduleForComponent('loading-dots', 'Integration | Component | loading dots', {
 test('it renders', function(assert) {
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });
+  this.set('text', 'loading')
+  this.render(hbs`{{loading-dots text=text}}`);
 
-  this.render(hbs`{{loading-dots}}`);
-
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#loading-dots}}
-      template block text
-    {{/loading-dots}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$().text().trim(), 'loading');
 });

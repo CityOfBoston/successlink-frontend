@@ -8,10 +8,10 @@ moduleForComponent('offer-status-map', 'helper:offer-status-map', {
 
 // Replace this with your real tests.
 test('it renders', function(assert) {
-  this.set('inputValue', '1234');
+  this.set('inputValue', 'offer_sent');
 
   this.render(hbs`{{offer-status-map inputValue}}`);
 
-  assert.equal(this.$().text().trim(), '1234');
+  assert.equal(this.$().text().trim(), 'Offer Sent');
 });
 
