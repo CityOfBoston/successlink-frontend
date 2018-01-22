@@ -1,0 +1,82 @@
+.table {
+  $header-height: 50px;
+
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow-x: scroll;
+
+  padding-top: $header-height + 10px;
+  border: 1px solid $color_bg-medium--accent;
+
+  .th, .tr { 
+    display: flex; 
+    width: max-content;
+
+    padding: 4px 12px;
+  }
+
+  .th {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    font-weight: 600;
+
+    background: $color_bg-medium;
+    border-bottom: 1px solid $color_brand-blue;
+
+    .td  {
+      min-height: $header-height;
+
+      span { 
+        @extend ._vertical-center;
+
+        white-space: nowrap;
+        overflow-x: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  .rows {
+    max-height: 58vh;
+    min-width: fit-content;
+    overflow-y: scroll;
+  }
+
+  .tr {
+    &:nth-of-type(2n)  { background: $color_bg-medium--accent; }
+  }
+
+  .td {
+    height: 100%;
+    width: 180px;
+    padding: 5px; 
+    margin: 0 15px;
+
+    text-align: left;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+
+    &:first-of-type { max-width: 35%; }
+  }
+
+  input.td {
+    background: none; 
+    border: none;
+    border-bottom: 2px solid transparent;
+    text-overflow: ellipsis;
+
+    &:focus {
+      border-bottom: 2px solid $color_brand-blue; 
+    }
+  }
+
+  button.disabled { 
+    visibility: hidden;
+  }
+  
+}

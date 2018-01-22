@@ -1,0 +1,33 @@
+---
+language: node_js
+node_js:
+  - "7"
+
+sudo: false
+dist: trusty
+
+env:
+  global:
+    # include $HOME/.local/bin for `aws`
+    - PATH=$HOME/.local/bin:$PATH
+
+addons:
+  chrome: stable
+
+cache:
+  yarn: true
+
+before_install:
+  # set up awscli packages
+  - pip install --user awscli
+
+jobs:
+  include:
+    - stage: Test
+      script: yarn test
+    - stage: Build and deploy
+      script: yarn build
+      after_success:
+      - aws s3 sync ~/dist/ s3://successlink-media/
+
+

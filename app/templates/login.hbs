@@ -1,0 +1,33 @@
+<section class="route login form-page">
+
+  <form {{action 'authenticate' on="submit"}}>
+    <img src="assets/images/boston-logo.svg" class="boston-logo">
+
+    <div class="form-content">
+      <h2>WELCOME</h2>
+
+      <article class="form-item">
+        {{input placeholder="Email" type="email" value=username}}
+      </article>
+
+      <article class="form-item">
+        {{input placeholder="Password" type="password" value=password}}
+      </article>
+
+      <button type="submit">LOG IN</button>
+    </div><!--/ .form-content -->
+
+    <div class="form-error">
+      {{#if errorMessage}} 
+        <p>{{errorMessage}}</p>
+      {{/if}}
+    </div>
+
+    <p class="explanation">
+      This login form is for DYEE staff only. If you are a youth job seeker 
+      or one of the program's partners, you should have a login link sent to 
+      you via email.
+    </p>
+  </form>
+
+</section>

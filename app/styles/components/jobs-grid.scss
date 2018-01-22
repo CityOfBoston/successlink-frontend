@@ -1,0 +1,31 @@
+.component.jobs-grid {
+
+  ul {
+    display: grid; 
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+    grid-auto-rows: 1fr;
+
+    li {
+      top: 0;
+
+      transition: border-color $job_box-speed, top $job_box-speed;
+
+      &:hover {
+        top: -3px;
+
+        border-color: $color_brand-blue--active;
+        transition: border-color $job_box-speed, top $job_box-speed;
+
+        h6 { 
+          background: $color_brand-blue--active;
+          transition: background $job_box-speed;
+        } 
+      }
+    }
+
+    h6 {
+      transition: background $job_box-speed;
+    }
+  }
+}

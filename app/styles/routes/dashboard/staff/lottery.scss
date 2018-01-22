@@ -1,0 +1,46 @@
+.route.lottery {
+
+  .applicants-table-wrapper {
+    @extend ._clear;
+
+    .pagination { top: 0; } 
+    .rows { max-height: 40vh; }
+
+    .lottery-button {
+      float: right; 
+
+      margin-top: 25px;
+    } 
+
+    .lottery-counter {
+      float: left; 
+
+      margin-top: 25px;
+
+      font-size: 14px;
+    }
+  }
+
+  .error-message {
+    float: right;
+
+    width: 100%;
+    margin-top: 25px;
+
+    color: $color_brand-red;
+    text-align: right; 
+  }
+
+  .status-box {
+    @extend ._vertical-center; 
+    top: 70%;
+
+    color: $color_font-medium;
+    font-size: 13px;
+    font-weight: 300;
+    text-align: center;
+
+    &.expire-active { top: 45%; }
+  }
+
+}

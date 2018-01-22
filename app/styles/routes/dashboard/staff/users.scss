@@ -1,0 +1,28 @@
+.route.staff-users {
+
+  .table {
+    $header-height: 35px;
+
+    padding-top: $header-height + 10px;
+
+    .th, .tr { width: 100%; }
+    .td { width: 50%; }
+
+    .th > .td { min-height: $header-height; }
+
+    .tr > .td {
+      font-size: 14px; 
+
+      &:first-of-type { 
+        padding-top: 10px; 
+      } 
+    }
+  }
+
+  .error-message {
+    margin-top: 25px;
+
+    text-align: right;
+  }
+
+}

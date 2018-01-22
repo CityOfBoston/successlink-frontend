@@ -1,0 +1,41 @@
+.route.staff {
+
+  .table-page {
+    @extend ._clear;
+
+    min-height: 75vh;
+
+    .pagination { top: 15px; }
+
+    .search-box {
+      width: 100%; 
+      font-size: 13px;
+      padding: 5px 15px;
+    }
+
+    .autosave-message {
+      position: absolute;
+      bottom: -30px;
+      right: 20px;
+
+      color: $color_font-medium;
+      font-size: 12px;
+
+      opacity: 0;
+      transition: opacity .3s;
+
+      &.display {
+        opacity: 1; 
+
+        transition: opacity .3s;
+      }
+    }
+
+    .download-button {
+      float: right;
+
+      margin-top: 25px;
+    }
+  }
+
+}
