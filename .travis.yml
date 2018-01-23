@@ -15,8 +15,6 @@ addons:
   chrome: stable
 cache:
   yarn: true
-before_install:
-- pip install --user awscli
 jobs:
   include:
   - stage: Test
