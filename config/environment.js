@@ -35,9 +35,11 @@ module.exports = function(environment) {
   if (environment === 'development') {
     ENV['host'] = 'http://localhost:3000';
   }
-
+  if (environment === 'staging') {
+    ENV['host'] = 'https://successlink.digital-staging.boston.gov/';
+  }
   if (environment === 'production') {
-    ENV['host'] = 'http://api.youthjobs.mapc.org';
+    ENV['host'] = 'https://successlink.digital-staging.boston.gov/';
   }
 
 
