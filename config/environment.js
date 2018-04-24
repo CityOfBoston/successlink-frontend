@@ -39,7 +39,7 @@ module.exports = function(environment) {
     ENV['host'] = 'https://successlink.digital-staging.boston.gov/';
   }
   if (environment === 'production') {
-    ENV['host'] = 'http://youthjobs.boston.gov/';
+    ENV['host'] = 'https://youthjobsapi.boston.gov/';
   }
 
 
