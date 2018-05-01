@@ -24,7 +24,7 @@ export default Ember.Controller.extend({
 
   @computed('model.picks.[]')
   queuedPicks(picks) {
-    return picks.filter(pick => !pick.get('status')).length > 0; 
+    return picks.filter(pick => !pick.get('status')).length > 0;
   },
 
 
@@ -66,8 +66,8 @@ export default Ember.Controller.extend({
       session.authorize(authorizer, (headerName, header) => {
         const headers = {};
         headers[headerName] = header;
-  
-        ajax 
+
+        ajax
         .post(endpoint, { headers })
         .catch(() => {
           this.set('errorMessage', 'Could not send offer emails to applicants');

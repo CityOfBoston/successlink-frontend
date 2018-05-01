@@ -12,7 +12,13 @@ export default Ember.Controller.extend({
 
   @computed('model.positions')
   totalAllotments(positions) {
-    return positions.get('firstObject.open_positions');
+    var count = 0;
+
+    positions.forEach(item => {
+      count = count + item.get('open_positions');
+    });
+
+    return count;
   },
 
 

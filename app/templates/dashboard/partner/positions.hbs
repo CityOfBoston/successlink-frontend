@@ -29,7 +29,7 @@
             <div class="column">
               <select selected=pick.position.title onchange={{action 'changePosition' pick}}>
                 {{#each model.positions as |position|}}
-                  <option value=position.title>{{position.title}}</option>
+                  <option value={{position.title}} selected={{eq pick.position.title position.title}}>{{position.title}}</option>
                 {{/each}}
               </select>
             </div>
