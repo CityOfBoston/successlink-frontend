@@ -12,7 +12,7 @@ export default PaginatedController.extend({
    */
 
   searchQuery: '',
-  defaultMax: 20,
+  defaultMax: 50,
 
 
   @computed('model.picks.[]')
@@ -21,7 +21,7 @@ export default PaginatedController.extend({
   },
 
 
-  @computed('model.requisitions.[]') 
+  @computed('model.requisitions.[]')
   interestedApplicants(requisitions)  {
     return requisitions.map(req => {
                           let applicant = req.get('applicant');
@@ -30,7 +30,7 @@ export default PaginatedController.extend({
                           return applicant;
                         })
                         .sortBy('last_name', 'first_name');
-                       
+
   },
 
 
@@ -59,11 +59,11 @@ export default PaginatedController.extend({
       this.resetPage();
       query = query.toLowerCase();
 
-      applicants = applicants.filter(x => { 
+      applicants = applicants.filter(x => {
         var firstName = (x.get('first_name') || '').toLowerCase(),
             lastName = (x.get('last_name') || '').toLowerCase();
 
-        return firstName.startsWith(query) || lastName.startsWith(query); 
+        return firstName.startsWith(query) || lastName.startsWith(query);
       });
     }
 
@@ -75,7 +75,7 @@ export default PaginatedController.extend({
   /**
    * Methods
    */
-  
+
 
   @action
   pickApplicant(applicant) {
