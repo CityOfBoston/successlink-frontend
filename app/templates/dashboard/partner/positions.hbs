@@ -27,7 +27,7 @@
               {{link-to pick.applicant.full_name 'dashboard.partner.applicants.show' pick.applicant.id}}
             </div>
             <div class="column">
-              <select selected=pick.position.title onchange={{action 'changePosition' pick}}>
+              <select selected=pick.position.title onchange={{action 'changePosition' pick}} disabled>
                 {{#each model.positions as |position|}}
                   <option value={{position.title}} selected={{eq pick.position.title position.title}}>{{position.title}}</option>
                 {{/each}}
@@ -35,13 +35,16 @@
             </div>
             <div class="column">{{pick-status-map pick.status}}</div>
             <div class="column">
+              <!--
               {{#unless (eq pick.status 'hire')}}
                 <button class="small" onclick={{action 'removePick' pick}}>REMOVE</button>
               {{/unless}}
+              -->
             </div>
           </div>
         {{/each}}
 
+        <!--
         {{#if queuedPicks}}
           <button class="small dark {{if submitted 'disabled'}}" onclick={{action 'submitForm'}}>{{if submitted 'OFFERS SENT' 'SEND OFFERS TO PICKED APPLICANTS'}}</button>
         {{else}}
@@ -51,6 +54,7 @@
             </div>
           {{/unless}}
         {{/if}}
+        -->
 
         {{#if errorMessage}}
           <div class="error-message">
